@@ -32,7 +32,7 @@ Submit button to enter the burger
 
 
     {{#unless devoured}}
-    {{> burger/burger-block  eat=true}}
+    {{> burger/burger-block  eat=0}}
     {{/unless}}
     {{/each}}
 </ul>
@@ -82,15 +82,15 @@ Submit button to enter the burger
 <h2>These burgers have already been eaten</h2>
 
 
-<!--
+
 <ul>
     {{#each burgers}}
     {{#if devoured}}
-    {{> burger/burger-block eat=false}}
+    {{> burger/burger-block eat=1}}
     {{/if}}
     {{/each}}
 </ul>
--->
+
 
 <!--
 <ul>
