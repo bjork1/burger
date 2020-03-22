@@ -14,10 +14,6 @@ connection.connect(function(err) {
     return;
   }
   console.log("connected as id " + connection.threadId);
-  connection.query("SELECT * FROM parties", function(err, result, fields) {
-    if (err) throw err;
-    console.log(result);
-  });
 });
 
 module.exports = connection;

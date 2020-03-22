@@ -1,4 +1,64 @@
-//Set up file so to have the template that Handebars can render to 
-//Create a button that will submit user input into the database
+<!-- Set up file so to have the template that Handebars can render to
+Create a button that will submit user input into the database -->
 
 
+<h1>Eat-Da-Burger!</h1>
+
+<!-- Image of burger at the top
+Eat Da Burger in Red Text
+Text Box to Enter text
+Submit button to enter the burger
+
+
+
+-->
+<!--
+
+<form>
+    <input class="blue" type="text">
+
+
+
+</form>
+
+<button type="submit">
+    Submit
+</button>
+
+-->
+<h2 class="blue">enter a burger you want to eat and click the "Submit" button.</h2>
+<ul>
+    {{#each burgers}}
+    <li>
+        <!--<p><span class="label">ID:</span> {{this.id}}</p>-->
+        <p>{{id}} {{burger_name}}</p>
+        <!--<p><span class="label">Author:</span> {{this.author}}</p>-->
+        <!--
+        <button data-id="{{this.id}}" class="delquote">Delete</button>
+
+        <a href="/{{this.id}}">Update this quote</a>
+
+        -->
+        <button class="delete-burger" type="submit" data-id="{{this.id}}">Devour It</button>
+    </li>
+    {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="burgerType">Author:</label>
+        <input type="text" id="burgerType" name="name">
+    </div>
+
+
+    <!--
+    <div class="form-group">
+        <label for="quo">Quote:</label>
+        <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
+    </div>
+-->
+    <button type="submit">Add Quote</button>
+</form>
