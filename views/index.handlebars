@@ -26,24 +26,39 @@ Submit button to enter the burger
 </button>
 
 -->
-<h2 class="blue">enter a burger you want to eat and click the "Submit" button.</h2>
+<h2 class="blue">These burgers have not been eaten</h2>
+<ul>
+    {{#each burgers}}
+
+
+    {{#unless devoured}}
+    {{> burger/burger-block  eat=true}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+
+<!--
+
 <ul>
     {{#each burgers}}
     <li>
-        <!--<p><span class="label">ID:</span> {{this.id}}</p>-->
-        <p>{{id}} {{burger_name}}</p>
-        <!--<p><span class="label">Author:</span> {{this.author}}</p>-->
-        <!--
+        <p><span class="label">ID:</span> {{this.id}}</p>-->
+
+<!--<p><span class="label">Author:</span> {{this.author}}</p>-->
+<!--
         <button data-id="{{this.id}}" class="delquote">Delete</button>
 
         <a href="/{{this.id}}">Update this quote</a>
 
         -->
-        <button class="delete-burger" type="submit" data-id="{{this.id}}">Devour It</button>
+<!--
+        <p>{{id}} {{burger_name}}</p>
+        <button class="change-eaten" type="submit" data-id="{{this.id}}">Devour It</button>
     </li>
     {{/each}}
 </ul>
-
+-->
 <h2>Add a Burger</h2>
 
 <form class="create-form">
@@ -62,3 +77,39 @@ Submit button to enter the burger
 -->
     <button type="submit">Add Quote</button>
 </form>
+
+<!-- Eaten burgers go below -->
+<h2>These burgers have already been eaten</h2>
+
+
+<!--
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    {{> burger/burger-block eat=false}}
+    {{/if}}
+    {{/each}}
+</ul>
+-->
+
+<!--
+<ul>
+    {{#each burgers}}
+    <li>
+        -->
+<!--<p><span class="label">ID:</span> {{this.id}}</p>-->
+
+<!--<p><span class="label">Author:</span> {{this.author}}</p>-->
+<!--
+        <button data-id="{{this.id}}" class="delquote">Delete</button>
+
+        <a href="/{{this.id}}">Update this quote</a>
+
+        -->
+<!--
+        <p>{{id}} {{burger_name}}</p>
+        <button class="change-eaten" type="submit" data-id="{{this.id}}">Devour It</button>
+    </li>
+    {{/each}}
+</ul>
+-->
