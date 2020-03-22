@@ -1,8 +1,9 @@
 <li>
+    {{id}}
     {{burger_name}}
 
     <button class="change-eaten" data-id="{{id}}" data-neweaten="{{eat}}">
-        {{#if eat}}SLEEP TIME!{{else}}WAKE UP!{{/if}}
+        {{#if eat}}{{else}}Devour it!{{/if}}
     </button>
     <!-- <button class="delete-cat" data-id="{{this.id}}">DELETE!</button> -->
 

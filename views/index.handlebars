@@ -27,7 +27,7 @@ Submit button to enter the burger
 
 -->
 <h2 class="blue">These burgers have not been eaten</h2>
-<ul>
+<ul style="list-style-type:none;">
     {{#each burgers}}
 
 
@@ -38,75 +38,73 @@ Submit button to enter the burger
 </ul>
 
 
-<!--
-
 <ul>
     {{#each burgers}}
     <li>
         <p><span class="label">ID:</span> {{this.id}}</p>-->
 
-<!--<p><span class="label">Author:</span> {{this.author}}</p>-->
-<!--
+        <!--<p><span class="label">Author:</span> {{this.author}}</p>-->
+        <!--
         <button data-id="{{this.id}}" class="delquote">Delete</button>
 
         <a href="/{{this.id}}">Update this quote</a>
 
         -->
-<!--
+        <!--
         <p>{{id}} {{burger_name}}</p>
         <button class="change-eaten" type="submit" data-id="{{this.id}}">Devour It</button>
     </li>
     {{/each}}
 </ul>
 -->
-<h2>Add a Burger</h2>
+        <h2>Add a Burger</h2>
 
-<form class="create-form">
+        <form class="create-form">
 
-    <div class="form-group">
-        <label for="burgerType">Author:</label>
-        <input type="text" id="burgerType" name="name">
-    </div>
+            <div class="form-group">
+                <label for="burgerType">Author:</label>
+                <input type="text" id="burgerType" name="name">
+            </div>
 
 
-    <!--
+            <!--
     <div class="form-group">
         <label for="quo">Quote:</label>
         <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
     </div>
 -->
-    <button type="submit">Add Quote</button>
-</form>
+            <button type="submit">Add Burger</button>
+        </form>
 
-<!-- Eaten burgers go below -->
-<h2>These burgers have already been eaten</h2>
-
-
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burger/burger-block eat=1}}
-    {{/if}}
-    {{/each}}
-</ul>
+        <!-- Eaten burgers go below -->
+        <h2>These burgers have already been eaten</h2>
 
 
-<!--
+
+        <ul style="list-style-type:none;">
+            {{#each burgers}}
+            {{#if devoured}}
+            {{> burger/burger-block eat=1}}
+            {{/if}}
+            {{/each}}
+        </ul>
+
+
+        <!--
 <ul>
     {{#each burgers}}
     <li>
         -->
-<!--<p><span class="label">ID:</span> {{this.id}}</p>-->
+        <!--<p><span class="label">ID:</span> {{this.id}}</p>-->
 
-<!--<p><span class="label">Author:</span> {{this.author}}</p>-->
-<!--
+        <!--<p><span class="label">Author:</span> {{this.author}}</p>-->
+        <!--
         <button data-id="{{this.id}}" class="delquote">Delete</button>
 
         <a href="/{{this.id}}">Update this quote</a>
 
         -->
-<!--
+        <!--
         <p>{{id}} {{burger_name}}</p>
         <button class="change-eaten" type="submit" data-id="{{this.id}}">Devour It</button>
     </li>

@@ -27,7 +27,7 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#burgerType")
+      burger_name: $("#burgerType")
         .val()
         .trim()
       /*type: $("[name=sleepy]:checked")
