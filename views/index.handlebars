@@ -33,6 +33,9 @@ Submit button to enter the burger
 
     {{#unless devoured}}
     {{> burger/burger-block  eat=0}}
+    <button class="change-eaten" data-id="{{id}}" data-neweaten="{{eat}}">
+        Devour it!
+    </button>
     {{/unless}}
     {{/each}}
 </ul>
